@@ -1,0 +1,26 @@
+name: TMI Message
+
+on:
+  schedule:
+    - cron:  '0 13 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Send Message
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Send Kanban Message
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_COLOR: '#E94579'
+          SLACK_ICON: https://user-images.githubusercontent.com/54518925/150765850-4ce12c1d-cca6-4fff-ab86-e912476821fb.png
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_TITLE: '다들....행복해?'
+          MSG_MINIMAL: true
+          SLACK_USERNAME: 콩돌이
+          SLACK_MESSAGE: '오늘 다들 뭐했어?'
+
