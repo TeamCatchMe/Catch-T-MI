@@ -22,5 +22,5 @@ jobs:
           SLACK_TITLE: '다들....행복해?'
           MSG_MINIMAL: true
           SLACK_USERNAME: 콩돌이
-          SLACK_MESSAGE: '오늘 다들 뭐했어?'
+          SLACK_MESSAGE: '오늘 다들 뭐했어? @here'
 
