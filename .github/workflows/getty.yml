@@ -1,0 +1,25 @@
+name: GETTY Message
+
+on:
+  schedule:
+    - cron:  '0 15 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Send Message
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Send Kanban Message
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_COLOR: '#E94579'
+          SLACK_ICON: https://download.logo.wine/logo/Getty_Images/Getty_Images-Logo.wine.png
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_TITLE: '게티이미지 사진전 가자...'
+          MSG_MINIMAL: true
+          SLACK_USERNAME: 게티이미지 사진전 같이 못가서 우는 망령
+          SLACK_MESSAGE: '3월 27일까진데....ㅠ'
