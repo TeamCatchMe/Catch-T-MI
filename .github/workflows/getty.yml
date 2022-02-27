@@ -1,8 +1,6 @@
 name: GETTY Message
 
 on:
-  schedule:
-    - cron:  '0 15 * * *'
   workflow_dispatch:
 
 jobs:
@@ -19,7 +17,7 @@ jobs:
           SLACK_COLOR: '#E94579'
           SLACK_ICON: https://download.logo.wine/logo/Getty_Images/Getty_Images-Logo.wine.png
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_TITLE: '게티이미지 사진전 가자...'
+          SLACK_TITLE: '헤헷'
           MSG_MINIMAL: true
-          SLACK_USERNAME: 게티이미지 사진전 같이 못가서 우는 망령
-          SLACK_MESSAGE: '3월 27일까진데....ㅠ'
+          SLACK_USERNAME: 게티이미지 사진전 같이가서 극락간 유령
+          SLACK_MESSAGE: '같이 가줘서 고마워 이제 그만 나는 이세카이를 떠날게'
